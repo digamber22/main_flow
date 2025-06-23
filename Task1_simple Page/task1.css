@@ -1,0 +1,194 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Font Styling */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f9f9f9;
+    color: #222;
+    line-height: 1.6;
+}
+
+/* Header & Navigation */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.logo img {
+    height: 40px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links a {
+    display: block;
+    padding: 0.75rem 1.2rem;
+    text-decoration: none;
+    color: #222;
+    font-weight: 500;
+    transition: background 0.2s, color 0.2s;
+}
+
+.nav-links a:hover {
+    background: #007BFF;
+    color: #fff;
+    border-radius: 4px;
+}
+
+/* Dropdown Menu */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background: #fff;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.08);
+    z-index: 1;
+    top: 100%;
+    left: 0;
+}
+
+.dropdown-content li a {
+    padding: 0.75rem 1.2rem;
+    color: #222;
+}
+
+.dropdown:hover .dropdown-content,
+.dropdown:focus-within .dropdown-content {
+    display: block;
+}
+
+/* Hero Section */
+.hero {
+    background: url('hero-bg.jpg') no-repeat center center/cover;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-content {
+    background: rgba(255,255,255,0.85);
+    padding: 2rem 3rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.05);
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.cta-btn {
+    background: #007BFF;
+    color: #fff;
+    padding: 0.9rem 2rem;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background 0.2s;
+}
+
+.cta-btn:hover {
+    background: #0056b3;
+}
+
+/* Features Section */
+.features {
+    padding: 3rem 2rem;
+    background: #fff;
+    text-align: center;
+}
+
+.features h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.features-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.feature {
+    background: #f1f3f6;
+    padding: 2rem;
+    border-radius: 8px;
+    width: 300px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.feature h3 {
+    margin-bottom: 1rem;
+    color: #007BFF;
+}
+
+/* Footer */
+footer {
+    background: #222;
+    color: #fff;
+    padding: 1.2rem 2rem;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.footer-links {
+    margin-top: 0.5rem;
+}
+
+.footer-links a {
+    color: #fff;
+    margin: 0 0.7rem;
+    text-decoration: underline;
+    font-size: 0.95rem;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .features-list {
+        flex-direction: column;
+        align-items: center;
+    }
+    .feature {
+        width: 90%;
+    }
+}
+
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .hero-content {
+        padding: 1.5rem 1rem;
+    }
+    .features {
+        padding: 2rem 1rem;
+    }
+}
